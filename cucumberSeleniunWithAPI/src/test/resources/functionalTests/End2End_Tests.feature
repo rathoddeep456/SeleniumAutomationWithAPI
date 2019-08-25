@@ -22,9 +22,9 @@ Feature: Automated End2End Tests
 
   @tag1
   Scenario: Customer place an order by purchesing an item from search.
-    Given user is on home page
-    When he search for "dress" 
-    And choose to buy the first item 
-    And moves to checkout from mini cart
+    Given user is redirect to this "https://reqres.in/"
+    When clicks on first api 
+    And execute api in new tab 
+    Then compare the output with ui
     
 
